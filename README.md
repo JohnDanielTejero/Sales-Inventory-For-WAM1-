@@ -7,4 +7,5 @@
 - MySQL
 
 ## Logic Design
-![image](https://github.com/user-attachments/assets/567a01b5-548e-436f-98b6-de030f226c12)
+![image](https://github.com/user-attachments/assets/569be8f4-4e33-4e4a-bbe5-e63f27db15b2)
+

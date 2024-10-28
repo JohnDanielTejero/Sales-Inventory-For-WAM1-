@@ -12,9 +12,16 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
     public partial class CategoriesForm : Form
     {
-        public CategoriesForm()
+        private Action<object> parentActionForm;
+        public CategoriesForm(Action<object> loadForm)
         {
             InitializeComponent();
+            this.parentActionForm = loadForm;
+        }
+
+        private void categoryFormCancel_Click(object sender, EventArgs e)
+        {
+            this.parentActionForm(new CategoriesListingForm(parentActionForm));
         }
     }
 }

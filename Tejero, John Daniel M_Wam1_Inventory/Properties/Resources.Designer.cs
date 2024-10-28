@@ -63,6 +63,16 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aaaa {
+            get {
+                object obj = ResourceManager.GetObject("aaaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Base_Background {
             get {
                 object obj = ResourceManager.GetObject("Base Background", resourceCulture);
@@ -96,6 +106,16 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Properties {
         internal static System.Drawing.Bitmap dashboard_svgrepo_com {
             get {
                 object obj = ResourceManager.GetObject("dashboard-svgrepo-com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hand_of_customer_holding_smartphone_and_making_purchase_in_app {
+            get {
+                object obj = ResourceManager.GetObject("Hand of customer holding smartphone and making purchase in app", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,16 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Properties {
         internal static System.Drawing.Bitmap users_svgrepo_com {
             get {
                 object obj = ResourceManager.GetObject("users_svgrepo_com", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wavy_Tech_31_Single_04 {
+            get {
+                object obj = ResourceManager.GetObject("Wavy_Tech-31_Single-04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

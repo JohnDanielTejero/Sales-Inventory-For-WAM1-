@@ -1,6 +1,6 @@
 ﻿namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    partial class UsersForm
+    partial class UsersListingForm
     {
         /// <summary>
         /// Required designer variable.

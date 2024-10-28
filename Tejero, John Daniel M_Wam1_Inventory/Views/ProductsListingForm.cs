@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    public partial class ProductsForm : Form
+    public partial class ProductsListingForm : Form
     {
         private Action<object> parentFormAction;
-        public ProductsForm(Action<object> parentFormAction)
+        public ProductsListingForm(Action<object> loadform)
         {
             InitializeComponent();
-            this.parentFormAction = parentFormAction;
+            this.parentFormAction = loadform;
         }
 
-        private void productFormCancel_Click(object sender, EventArgs e)
+        private void addProductButton_Click(object sender, EventArgs e)
         {
-            this.parentFormAction(new ProductsListingForm(parentFormAction));
+            this.parentFormAction(new ProductsForm(this.parentFormAction));
         }
     }
 }

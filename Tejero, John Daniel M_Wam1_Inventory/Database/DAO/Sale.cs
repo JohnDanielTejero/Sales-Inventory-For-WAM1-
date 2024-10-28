@@ -12,6 +12,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Database.DAO
         public int UserID { get; set; }
         public DateTime Date_Creation { get; set; }
         public string CustomerName { get; set; }
+        public float Total { get; set; }
 
         public User User { get; set; }
         public ICollection<SalesItem> SalesItems { get; set; }

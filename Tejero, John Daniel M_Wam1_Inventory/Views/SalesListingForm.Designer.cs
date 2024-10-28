@@ -1,6 +1,6 @@
 ﻿namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    partial class SalesForm
+    partial class SalesListingForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,18 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchbox = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.userTable = new System.Windows.Forms.DataGridView();
-            this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salesTable = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.editUserButton = new System.Windows.Forms.Button();
-            this.deleteUserButton = new System.Windows.Forms.Button();
-            this.addUserButton = new System.Windows.Forms.Button();
+            this.addSalesButton = new System.Windows.Forms.Button();
+            this.SalesId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchbox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesTable)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,16 +75,16 @@
             this.textBox1.Size = new System.Drawing.Size(778, 22);
             this.textBox1.TabIndex = 0;
             // 
-            // userTable
+            // salesTable
             // 
-            this.userTable.AllowUserToAddRows = false;
-            this.userTable.AllowUserToDeleteRows = false;
-            this.userTable.AllowUserToResizeColumns = false;
-            this.userTable.AllowUserToResizeRows = false;
-            this.userTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.userTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.userTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.salesTable.AllowUserToAddRows = false;
+            this.salesTable.AllowUserToDeleteRows = false;
+            this.salesTable.AllowUserToResizeColumns = false;
+            this.salesTable.AllowUserToResizeRows = false;
+            this.salesTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.salesTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salesTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.salesTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,23 +92,23 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.userTable.ColumnHeadersHeight = 40;
-            this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserId,
-            this.Username,
-            this.FirstName,
-            this.LastName,
-            this.Role});
-            this.userTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userTable.EnableHeadersVisualStyles = false;
-            this.userTable.GridColor = System.Drawing.Color.White;
-            this.userTable.Location = new System.Drawing.Point(0, 0);
-            this.userTable.MultiSelect = false;
-            this.userTable.Name = "userTable";
-            this.userTable.ReadOnly = true;
-            this.userTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.salesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.salesTable.ColumnHeadersHeight = 40;
+            this.salesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.salesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SalesId,
+            this.User,
+            this.Creation,
+            this.Customer,
+            this.Total});
+            this.salesTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.salesTable.EnableHeadersVisualStyles = false;
+            this.salesTable.GridColor = System.Drawing.Color.White;
+            this.salesTable.Location = new System.Drawing.Point(0, 26);
+            this.salesTable.MultiSelect = false;
+            this.salesTable.Name = "salesTable";
+            this.salesTable.ReadOnly = true;
+            this.salesTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,65 +116,25 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.userTable.RowHeadersVisible = false;
-            this.userTable.RowHeadersWidth = 25;
-            this.userTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.salesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.salesTable.RowHeadersVisible = false;
+            this.salesTable.RowHeadersWidth = 25;
+            this.salesTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.userTable.RowTemplate.Height = 25;
-            this.userTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.userTable.Size = new System.Drawing.Size(800, 665);
-            this.userTable.TabIndex = 11;
-            // 
-            // UserId
-            // 
-            this.UserId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.UserId.FillWeight = 50F;
-            this.UserId.HeaderText = "Id";
-            this.UserId.Name = "UserId";
-            this.UserId.ReadOnly = true;
-            // 
-            // Username
-            // 
-            this.Username.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Username.FillWeight = 150F;
-            this.Username.HeaderText = "Username";
-            this.Username.Name = "Username";
-            this.Username.ReadOnly = true;
-            // 
-            // FirstName
-            // 
-            this.FirstName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FirstName.FillWeight = 150F;
-            this.FirstName.HeaderText = "First Name";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            // 
-            // LastName
-            // 
-            this.LastName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.LastName.FillWeight = 150F;
-            this.LastName.HeaderText = "Last Name";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            // 
-            // Role
-            // 
-            this.Role.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Role.HeaderText = "Role";
-            this.Role.Name = "Role";
-            this.Role.ReadOnly = true;
+            this.salesTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.salesTable.RowTemplate.Height = 25;
+            this.salesTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.salesTable.Size = new System.Drawing.Size(800, 639);
+            this.salesTable.TabIndex = 11;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.editUserButton);
-            this.panel2.Controls.Add(this.deleteUserButton);
-            this.panel2.Controls.Add(this.addUserButton);
+            this.panel2.Controls.Add(this.addSalesButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 665);
             this.panel2.Name = "panel2";
@@ -195,31 +154,59 @@
             this.editUserButton.Text = "View";
             this.editUserButton.UseVisualStyleBackColor = false;
             // 
-            // deleteUserButton
+            // addSalesButton
             // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.deleteUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.deleteUserButton.Location = new System.Drawing.Point(12, 13);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(128, 55);
-            this.deleteUserButton.TabIndex = 9;
-            this.deleteUserButton.Text = "Delete";
-            this.deleteUserButton.UseVisualStyleBackColor = true;
+            this.addSalesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSalesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.addSalesButton.Location = new System.Drawing.Point(662, 12);
+            this.addSalesButton.Name = "addSalesButton";
+            this.addSalesButton.Size = new System.Drawing.Size(128, 55);
+            this.addSalesButton.TabIndex = 7;
+            this.addSalesButton.Text = "Add";
+            this.addSalesButton.UseVisualStyleBackColor = false;
             // 
-            // addUserButton
+            // SalesId
             // 
-            this.addUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.addUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.addUserButton.Location = new System.Drawing.Point(662, 12);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(128, 55);
-            this.addUserButton.TabIndex = 7;
-            this.addUserButton.Text = "Add";
-            this.addUserButton.UseVisualStyleBackColor = false;
+            this.SalesId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SalesId.FillWeight = 50F;
+            this.SalesId.HeaderText = "Id";
+            this.SalesId.Name = "SalesId";
+            this.SalesId.ReadOnly = true;
             // 
-            // SalesForm
+            // User
+            // 
+            this.User.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.User.FillWeight = 150F;
+            this.User.HeaderText = "Processed By";
+            this.User.Name = "User";
+            this.User.ReadOnly = true;
+            // 
+            // Creation
+            // 
+            this.Creation.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Creation.FillWeight = 150F;
+            this.Creation.HeaderText = "Date Created";
+            this.Creation.Name = "Creation";
+            this.Creation.ReadOnly = true;
+            // 
+            // Customer
+            // 
+            this.Customer.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Customer.FillWeight = 150F;
+            this.Customer.HeaderText = "Customer";
+            this.Customer.Name = "Customer";
+            this.Customer.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // SalesListingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -227,14 +214,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 744);
             this.Controls.Add(this.searchbox);
-            this.Controls.Add(this.userTable);
+            this.Controls.Add(this.salesTable);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SalesForm";
+            this.Name = "SalesListingForm";
             this.Text = "Sales";
             this.searchbox.ResumeLayout(false);
             this.searchbox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.userTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesTable)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -244,15 +231,14 @@
 
         private System.Windows.Forms.GroupBox searchbox;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView userTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.DataGridView salesTable;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button editUserButton;
-        private System.Windows.Forms.Button deleteUserButton;
-        private System.Windows.Forms.Button addUserButton;
+        private System.Windows.Forms.Button addSalesButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SalesId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn User;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Creation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
     }
 }

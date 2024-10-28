@@ -179,7 +179,7 @@
             this.categoryButton.Name = "categoryButton";
             this.categoryButton.Size = new System.Drawing.Size(308, 79);
             this.categoryButton.TabIndex = 0;
-            this.categoryButton.Paint += new System.Windows.Forms.PaintEventHandler(this.categoryButton_Paint);
+            this.categoryButton.Click += new System.EventHandler(this.categoryButton_Click);
             // 
             // categoryButtonLabel
             // 
@@ -216,7 +216,7 @@
             this.salesButton.Name = "salesButton";
             this.salesButton.Size = new System.Drawing.Size(308, 79);
             this.salesButton.TabIndex = 0;
-            this.salesButton.Paint += new System.Windows.Forms.PaintEventHandler(this.salesButton_Paint);
+            this.salesButton.Click += new System.EventHandler(this.salesButton_Click);
             // 
             // salesButtonLabel
             // 

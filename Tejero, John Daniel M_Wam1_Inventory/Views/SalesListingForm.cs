@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    public partial class SalesForm : Form
+    public partial class SalesListingForm : Form
     {
-        public SalesForm()
+        private Action<object> parentFormAction;
+        public SalesListingForm(Action<object> loadform)
         {
             InitializeComponent();
+            this.parentFormAction = loadform;
         }
     }
 }

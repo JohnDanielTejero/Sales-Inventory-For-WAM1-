@@ -1,6 +1,6 @@
 ﻿namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    partial class ProductsForm
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,42 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.userFormLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.productFormQuantity = new System.Windows.Forms.NumericUpDown();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.productFormCategory = new System.Windows.Forms.ComboBox();
+            this.userFormRole = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.userFormLastName = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.userFormFirstName = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.productFormPrice = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.productFormCancel = new System.Windows.Forms.Button();
+            this.userFormPassword = new System.Windows.Forms.TextBox();
+            this.userFormDelete = new System.Windows.Forms.Button();
             this.userFormSubmitButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.productFormName = new System.Windows.Forms.TextBox();
+            this.userFormUsername = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.productFormLabel = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productFormQuantity)).BeginInit();
             this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productFormPrice)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.userFormLabel);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(798, 80);
+            this.panel1.TabIndex = 0;
+            // 
+            // userFormLabel
+            // 
+            this.userFormLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userFormLabel.AutoSize = true;
+            this.userFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFormLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userFormLabel.Location = new System.Drawing.Point(27, 25);
+            this.userFormLabel.Name = "userFormLabel";
+            this.userFormLabel.Size = new System.Drawing.Size(144, 33);
+            this.userFormLabel.TabIndex = 2;
+            this.userFormLabel.Text = "Add User";
             // 
             // panel2
             // 
@@ -72,7 +91,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 80);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(798, 641);
-            this.panel2.TabIndex = 3;
+            this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
@@ -88,11 +107,11 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel9);
+            this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.productFormCancel);
+            this.panel4.Controls.Add(this.userFormDelete);
             this.panel4.Controls.Add(this.userFormSubmitButton);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
@@ -101,60 +120,27 @@
             this.panel4.Size = new System.Drawing.Size(360, 422);
             this.panel4.TabIndex = 1;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.productFormQuantity);
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(3, 301);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(354, 48);
-            this.panel8.TabIndex = 12;
-            // 
-            // productFormQuantity
-            // 
-            this.productFormQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.productFormQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productFormQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.productFormQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productFormQuantity.Location = new System.Drawing.Point(0, 20);
-            this.productFormQuantity.Name = "productFormQuantity";
-            this.productFormQuantity.Size = new System.Drawing.Size(354, 31);
-            this.productFormQuantity.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Quantity";
-            // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.productFormCategory);
+            this.panel9.Controls.Add(this.userFormRole);
             this.panel9.Controls.Add(this.label5);
-            this.panel9.Location = new System.Drawing.Point(3, 237);
+            this.panel9.Location = new System.Drawing.Point(3, 250);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(354, 58);
             this.panel9.TabIndex = 11;
             // 
-            // productFormCategory
+            // userFormRole
             // 
-            this.productFormCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.productFormCategory.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.productFormCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.productFormCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.productFormCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productFormCategory.FormattingEnabled = true;
-            this.productFormCategory.Location = new System.Drawing.Point(0, 25);
-            this.productFormCategory.Name = "productFormCategory";
-            this.productFormCategory.Size = new System.Drawing.Size(354, 33);
-            this.productFormCategory.TabIndex = 2;
+            this.userFormRole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.userFormRole.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userFormRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.userFormRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.userFormRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userFormRole.FormattingEnabled = true;
+            this.userFormRole.Location = new System.Drawing.Point(0, 25);
+            this.userFormRole.Name = "userFormRole";
+            this.userFormRole.Size = new System.Drawing.Size(354, 33);
+            this.userFormRole.TabIndex = 2;
             // 
             // label5
             // 
@@ -165,9 +151,43 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
+            this.label5.Size = new System.Drawing.Size(46, 20);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Category";
+            this.label5.Text = "Role";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Controls.Add(this.userFormLastName);
+            this.panel8.Location = new System.Drawing.Point(3, 199);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(354, 45);
+            this.panel8.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Last Name";
+            // 
+            // userFormLastName
+            // 
+            this.userFormLastName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.userFormLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userFormLastName.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userFormLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFormLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userFormLastName.Location = new System.Drawing.Point(0, 21);
+            this.userFormLastName.Name = "userFormLastName";
+            this.userFormLastName.Size = new System.Drawing.Size(354, 24);
+            this.userFormLastName.TabIndex = 0;
             // 
             // panel7
             // 
@@ -175,7 +195,7 @@
             this.panel7.Controls.Add(this.userFormFirstName);
             this.panel7.Location = new System.Drawing.Point(3, 148);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(354, 83);
+            this.panel7.Size = new System.Drawing.Size(354, 45);
             this.panel7.TabIndex = 2;
             // 
             // label3
@@ -187,9 +207,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 20);
+            this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Description";
+            this.label3.Text = "First Name";
             // 
             // userFormFirstName
             // 
@@ -198,31 +218,19 @@
             this.userFormFirstName.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.userFormFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userFormFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.userFormFirstName.Location = new System.Drawing.Point(0, 23);
-            this.userFormFirstName.Multiline = true;
+            this.userFormFirstName.Location = new System.Drawing.Point(0, 21);
             this.userFormFirstName.Name = "userFormFirstName";
-            this.userFormFirstName.Size = new System.Drawing.Size(354, 60);
+            this.userFormFirstName.Size = new System.Drawing.Size(354, 24);
             this.userFormFirstName.TabIndex = 0;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.productFormPrice);
             this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.userFormPassword);
             this.panel6.Location = new System.Drawing.Point(3, 97);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(354, 48);
+            this.panel6.Size = new System.Drawing.Size(354, 45);
             this.panel6.TabIndex = 2;
-            // 
-            // productFormPrice
-            // 
-            this.productFormPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.productFormPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.productFormPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.productFormPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productFormPrice.Location = new System.Drawing.Point(0, 20);
-            this.productFormPrice.Name = "productFormPrice";
-            this.productFormPrice.Size = new System.Drawing.Size(354, 31);
-            this.productFormPrice.TabIndex = 2;
             // 
             // label2
             // 
@@ -233,22 +241,35 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Price";
+            this.label2.Text = "Password";
             // 
-            // productFormCancel
+            // userFormPassword
             // 
-            this.productFormCancel.FlatAppearance.BorderSize = 0;
-            this.productFormCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.productFormCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productFormCancel.Location = new System.Drawing.Point(0, 364);
-            this.productFormCancel.Name = "productFormCancel";
-            this.productFormCancel.Size = new System.Drawing.Size(172, 55);
-            this.productFormCancel.TabIndex = 10;
-            this.productFormCancel.Text = "Cancel";
-            this.productFormCancel.UseVisualStyleBackColor = true;
-            this.productFormCancel.Click += new System.EventHandler(this.productFormCancel_Click);
+            this.userFormPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.userFormPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userFormPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userFormPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFormPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userFormPassword.Location = new System.Drawing.Point(0, 21);
+            this.userFormPassword.Name = "userFormPassword";
+            this.userFormPassword.PasswordChar = '*';
+            this.userFormPassword.Size = new System.Drawing.Size(354, 24);
+            this.userFormPassword.TabIndex = 0;
+            // 
+            // userFormDelete
+            // 
+            this.userFormDelete.FlatAppearance.BorderSize = 0;
+            this.userFormDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.userFormDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userFormDelete.Location = new System.Drawing.Point(0, 324);
+            this.userFormDelete.Name = "userFormDelete";
+            this.userFormDelete.Size = new System.Drawing.Size(172, 55);
+            this.userFormDelete.TabIndex = 10;
+            this.userFormDelete.Text = "Cancel";
+            this.userFormDelete.UseVisualStyleBackColor = true;
+            this.userFormDelete.Click += new System.EventHandler(this.deleteUserButton_Click);
             // 
             // userFormSubmitButton
             // 
@@ -259,17 +280,18 @@
             this.userFormSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.userFormSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.userFormSubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.userFormSubmitButton.Location = new System.Drawing.Point(184, 364);
+            this.userFormSubmitButton.Location = new System.Drawing.Point(181, 324);
             this.userFormSubmitButton.Name = "userFormSubmitButton";
             this.userFormSubmitButton.Size = new System.Drawing.Size(176, 55);
             this.userFormSubmitButton.TabIndex = 9;
-            this.userFormSubmitButton.Text = "Add Product";
+            this.userFormSubmitButton.Text = "Add User";
             this.userFormSubmitButton.UseVisualStyleBackColor = false;
+            this.userFormSubmitButton.Click += new System.EventHandler(this.addUserButton_Click);
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.productFormName);
+            this.panel5.Controls.Add(this.userFormUsername);
             this.panel5.Location = new System.Drawing.Point(3, 46);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(354, 45);
@@ -284,27 +306,27 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Product Name";
+            this.label1.Text = "Username";
             // 
-            // productFormName
+            // userFormUsername
             // 
-            this.productFormName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.productFormName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productFormName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.productFormName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productFormName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productFormName.Location = new System.Drawing.Point(0, 21);
-            this.productFormName.Name = "productFormName";
-            this.productFormName.Size = new System.Drawing.Size(354, 24);
-            this.productFormName.TabIndex = 0;
+            this.userFormUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.userFormUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userFormUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.userFormUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userFormUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userFormUsername.Location = new System.Drawing.Point(0, 21);
+            this.userFormUsername.Name = "userFormUsername";
+            this.userFormUsername.Size = new System.Drawing.Size(354, 24);
+            this.userFormUsername.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::Tejero__John_Daniel_M_Wam1_Inventory.Properties.Resources.Wavy_Tech_31_Single_04;
+            this.pictureBox1.Image = global::Tejero__John_Daniel_M_Wam1_Inventory.Properties.Resources.aaaa;
             this.pictureBox1.Location = new System.Drawing.Point(386, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(368, 422);
@@ -312,28 +334,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.productFormLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 80);
-            this.panel1.TabIndex = 2;
-            // 
-            // productFormLabel
-            // 
-            this.productFormLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.productFormLabel.AutoSize = true;
-            this.productFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productFormLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productFormLabel.Location = new System.Drawing.Point(27, 25);
-            this.productFormLabel.Name = "productFormLabel";
-            this.productFormLabel.Size = new System.Drawing.Size(185, 33);
-            this.productFormLabel.TabIndex = 2;
-            this.productFormLabel.Text = "Add Product";
-            // 
-            // ProductsForm
+            // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -343,55 +344,53 @@
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ProductsForm";
-            this.Text = "ProductsForm";
+            this.Name = "UserForm";
+            this.Text = "AddUser";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productFormQuantity)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productFormPrice)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox userFormUsername;
+        private System.Windows.Forms.Button userFormSubmitButton;
+        private System.Windows.Forms.Button userFormDelete;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.ComboBox productFormCategory;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox userFormLastName;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox userFormFirstName;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button productFormCancel;
-        private System.Windows.Forms.Button userFormSubmitButton;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox userFormPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox productFormName;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label productFormLabel;
-        private System.Windows.Forms.NumericUpDown productFormPrice;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.NumericUpDown productFormQuantity;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox userFormRole;
+        private System.Windows.Forms.Label userFormLabel;
     }
 }

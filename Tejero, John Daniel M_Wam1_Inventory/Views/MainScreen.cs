@@ -15,12 +15,11 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
         public MainScreen()
         {
             InitializeComponent();
-            this.loadform(new Dashboard());
         }
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-
+            this.loadform(new Dashboard());
         }
         public void loadform(object form)
         {
@@ -53,17 +52,17 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
         private void inventoryButton_MouseClick(object sender, MouseEventArgs e)
         {
-            this.loadform(new ProductsForm());
+            this.loadform(new ProductsListingForm(this.loadform));
         }
 
         private void inventoryButtonLabel_Click(object sender, EventArgs e)
         {
-            this.loadform(new ProductsForm());
+            this.loadform(new ProductsListingForm(this.loadform));
         }
 
         private void inventoryButtonIcon_Click(object sender, EventArgs e)
         {
-            this.loadform(new ProductsForm());
+            this.loadform(new ProductsListingForm(this.loadform));
         }
 
         private void logoutButton_MouseClick(object sender, MouseEventArgs e)
@@ -90,47 +89,47 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
         private void usersButton_Click(object sender, EventArgs e)
         {
-            this.loadform(new UsersForm());
+            this.loadform(new UsersListingForm(this.loadform));
         }
 
         private void usersButtonLabel_Click(object sender, EventArgs e)
         {
-            this.loadform(new UsersForm());
+            this.loadform(new UsersListingForm(this.loadform));
         }
 
         private void usersButtonIcon_Click(object sender, EventArgs e)
         {
-            this.loadform(new UsersForm());
+            this.loadform(new UsersListingForm(this.loadform));
         }
 
-        private void categoryButton_Paint(object sender, PaintEventArgs e)
+        private void categoryButton_Click(object sender, EventArgs e)
         {
-            this.loadform(new CategoriesForm());
+            this.loadform(new CategoriesListingForm((this.loadform)));
         }
 
         private void categoryButtonLabel_Click(object sender, EventArgs e)
         {
-            this.loadform(new CategoriesForm());
+            this.loadform(new CategoriesListingForm((this.loadform)));
         }
 
         private void categoryButtonIcon_Click(object sender, EventArgs e)
         {
-            this.loadform(new CategoriesForm());
-        }
-
-        private void salesButton_Paint(object sender, PaintEventArgs e)
-        {
-            this.loadform(new SalesForm());
+            this.loadform(new CategoriesListingForm((this.loadform)));
         }
 
         private void salesButtonLabel_Click(object sender, EventArgs e)
         {
-            this.loadform(new SalesForm());
+            this.loadform(new SalesListingForm(this.loadform));
         }
 
         private void salesButtonIcon_Click(object sender, EventArgs e)
         {
-            this.loadform(new SalesForm());
+            this.loadform(new SalesListingForm(this.loadform));
+        }   
+
+        private void salesButton_Click(object sender, EventArgs e)
+        {
+            this.loadform(new SalesListingForm(this.loadform));
         }
     }
 }

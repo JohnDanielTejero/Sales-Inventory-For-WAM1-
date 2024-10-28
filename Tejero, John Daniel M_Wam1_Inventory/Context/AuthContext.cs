@@ -42,39 +42,6 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Context
         }
 
         //need more efficient way of automating navigation
-        public static void navigateTo(Form f, string path)
-        {
-            if (path.Equals("Dashboard"))
-            {
-
-                f.Hide();
-                Dashboard view = new Dashboard();
-                view.Show();
-            }else if (path.Equals("Sales"))
-            {
-                f.Hide();
-                SalesForm view = new SalesForm();
-                view.Show();
-            }
-            else if (path.Equals("Users"))
-            {
-                f.Hide();
-                UsersForm view = new UsersForm();
-                view.Show();
-            }
-            else if (path.Equals("Categories"))
-            {
-                f.Hide();
-                CategoriesForm view = new CategoriesForm();
-                view.Show();
-            }
-            else if (path.Equals("Products"))
-            {
-                f.Hide();
-                ProductsForm view = new ProductsForm();
-                view.Show();
-            }
-
-        }
+        
     }
 }

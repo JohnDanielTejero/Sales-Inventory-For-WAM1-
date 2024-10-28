@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    public partial class UsersForm : Form
+    public partial class UsersListingForm : Form
     {
-        public UsersForm()
+        private Action<object> parentFormAction; 
+        public UsersListingForm(Action<object> loadForm)
         {
             InitializeComponent();
+            parentFormAction = loadForm;
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -29,7 +31,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
         private void addUserButton_Click(object sender, EventArgs e)
         {
-            this.userTable.Rows.Clear();
+            parentFormAction(new UserForm(parentFormAction));
         }
     }
 }

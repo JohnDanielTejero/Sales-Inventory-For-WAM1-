@@ -216,6 +216,24 @@
     <Compile Include="Views\CategoriesForm.Designer.cs">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ProductsForm.Designer.cs">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoriesListingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CategoriesListingForm.Designer.cs">
+      <DependentUpon>CategoriesListingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,23 +252,23 @@
     <Compile Include="Views\MainScreen.Designer.cs">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ProductsForm.cs">
+    <Compile Include="Views\ProductsListingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ProductsForm.Designer.cs">
-      <DependentUpon>ProductsForm.cs</DependentUpon>
+    <Compile Include="Views\ProductsListingForm.Designer.cs">
+      <DependentUpon>ProductsListingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SalesForm.cs">
+    <Compile Include="Views\SalesListingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\SalesForm.Designer.cs">
-      <DependentUpon>SalesForm.cs</DependentUpon>
+    <Compile Include="Views\SalesListingForm.Designer.cs">
+      <DependentUpon>SalesListingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UsersForm.cs">
+    <Compile Include="Views\UsersListingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\UsersForm.Designer.cs">
-      <DependentUpon>UsersForm.cs</DependentUpon>
+    <Compile Include="Views\UsersListingForm.Designer.cs">
+      <DependentUpon>UsersListingForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Custom UI\CustomDashboardButton.resx">
       <DependentUpon>CustomDashboardButton.cs</DependentUpon>
@@ -271,6 +289,15 @@
     <EmbeddedResource Include="Views\CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProductsForm.resx">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CategoriesListingForm.resx">
+      <DependentUpon>CategoriesListingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,14 +307,14 @@
     <EmbeddedResource Include="Views\MainScreen.resx">
       <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ProductsForm.resx">
-      <DependentUpon>ProductsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ProductsListingForm.resx">
+      <DependentUpon>ProductsListingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\SalesForm.resx">
-      <DependentUpon>SalesForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\SalesListingForm.resx">
+      <DependentUpon>SalesListingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\UsersForm.resx">
-      <DependentUpon>UsersForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\UsersListingForm.resx">
+      <DependentUpon>UsersListingForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -347,6 +374,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\stock-out-svgrepo-com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand of customer holding smartphone and making purchase in app.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wavy_Tech-31_Single-04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

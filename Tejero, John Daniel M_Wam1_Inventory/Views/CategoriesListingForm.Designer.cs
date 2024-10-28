@@ -34,16 +34,18 @@
             this.searchbox = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.categoryTable = new System.Windows.Forms.DataGridView();
+            this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.viewCategoryListButton = new System.Windows.Forms.Button();
             this.deleteCategoryListButton = new System.Windows.Forms.Button();
             this.categoryListFormButton = new System.Windows.Forms.Button();
-            this.CategoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.searchbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryTable)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchbox
@@ -98,10 +100,10 @@
             this.CategoryId,
             this.CategoryName,
             this.Description});
-            this.categoryTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.categoryTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryTable.EnableHeadersVisualStyles = false;
             this.categoryTable.GridColor = System.Drawing.Color.White;
-            this.categoryTable.Location = new System.Drawing.Point(0, 12);
+            this.categoryTable.Location = new System.Drawing.Point(5, 5);
             this.categoryTable.MultiSelect = false;
             this.categoryTable.Name = "categoryTable";
             this.categoryTable.ReadOnly = true;
@@ -125,8 +127,32 @@
             this.categoryTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.categoryTable.RowTemplate.Height = 25;
             this.categoryTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.categoryTable.Size = new System.Drawing.Size(794, 637);
+            this.categoryTable.Size = new System.Drawing.Size(784, 581);
             this.categoryTable.TabIndex = 11;
+            // 
+            // CategoryId
+            // 
+            this.CategoryId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CategoryId.FillWeight = 50F;
+            this.CategoryId.HeaderText = "Id";
+            this.CategoryId.Name = "CategoryId";
+            this.CategoryId.ReadOnly = true;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CategoryName.FillWeight = 200F;
+            this.CategoryName.HeaderText = "Category";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Description.FillWeight = 500F;
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
             // 
             // panel2
             // 
@@ -177,29 +203,15 @@
             this.categoryListFormButton.UseVisualStyleBackColor = false;
             this.categoryListFormButton.Click += new System.EventHandler(this.categoryListFormButton_Click);
             // 
-            // CategoryId
+            // panel1
             // 
-            this.CategoryId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CategoryId.FillWeight = 50F;
-            this.CategoryId.HeaderText = "Id";
-            this.CategoryId.Name = "CategoryId";
-            this.CategoryId.ReadOnly = true;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CategoryName.FillWeight = 200F;
-            this.CategoryName.HeaderText = "Category";
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Description.FillWeight = 500F;
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
+            this.panel1.Controls.Add(this.categoryTable);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(794, 591);
+            this.panel1.TabIndex = 14;
             // 
             // CategoriesListingForm
             // 
@@ -207,8 +219,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(794, 728);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.searchbox);
-            this.Controls.Add(this.categoryTable);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CategoriesListingForm";
@@ -217,6 +229,7 @@
             this.searchbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryTable)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -233,5 +246,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryId;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.Panel panel1;
     }
 }

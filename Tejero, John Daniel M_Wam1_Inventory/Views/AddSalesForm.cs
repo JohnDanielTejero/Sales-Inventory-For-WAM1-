@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    public partial class Entry : Form
+    public partial class AddSalesForm : Form
     {
-        public Entry()
+        public AddSalesForm()
         {
             InitializeComponent();
-        }
-
-        private void loginbtn_Click(object sender, EventArgs e)
-        {
-            MainScreen d = new MainScreen();
-            this.Hide();
-            d.Show();
         }
     }
 }

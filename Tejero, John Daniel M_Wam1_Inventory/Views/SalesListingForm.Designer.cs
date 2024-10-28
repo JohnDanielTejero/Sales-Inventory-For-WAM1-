@@ -34,17 +34,19 @@
             this.searchbox = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.salesTable = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.editUserButton = new System.Windows.Forms.Button();
-            this.addSalesButton = new System.Windows.Forms.Button();
             this.SalesId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Creation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.editUserButton = new System.Windows.Forms.Button();
+            this.addSalesButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.searchbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesTable)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchbox
@@ -101,10 +103,10 @@
             this.Creation,
             this.Customer,
             this.Total});
-            this.salesTable.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.salesTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.salesTable.EnableHeadersVisualStyles = false;
             this.salesTable.GridColor = System.Drawing.Color.White;
-            this.salesTable.Location = new System.Drawing.Point(0, 26);
+            this.salesTable.Location = new System.Drawing.Point(5, 5);
             this.salesTable.MultiSelect = false;
             this.salesTable.Name = "salesTable";
             this.salesTable.ReadOnly = true;
@@ -128,44 +130,8 @@
             this.salesTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.salesTable.RowTemplate.Height = 25;
             this.salesTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.salesTable.Size = new System.Drawing.Size(800, 639);
+            this.salesTable.Size = new System.Drawing.Size(790, 597);
             this.salesTable.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.editUserButton);
-            this.panel2.Controls.Add(this.addSalesButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 665);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 79);
-            this.panel2.TabIndex = 13;
-            // 
-            // editUserButton
-            // 
-            this.editUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.editUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.editUserButton.Location = new System.Drawing.Point(528, 12);
-            this.editUserButton.Name = "editUserButton";
-            this.editUserButton.Size = new System.Drawing.Size(128, 55);
-            this.editUserButton.TabIndex = 8;
-            this.editUserButton.Text = "View";
-            this.editUserButton.UseVisualStyleBackColor = false;
-            // 
-            // addSalesButton
-            // 
-            this.addSalesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.addSalesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addSalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addSalesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.addSalesButton.Location = new System.Drawing.Point(662, 12);
-            this.addSalesButton.Name = "addSalesButton";
-            this.addSalesButton.Size = new System.Drawing.Size(128, 55);
-            this.addSalesButton.TabIndex = 7;
-            this.addSalesButton.Text = "Add";
-            this.addSalesButton.UseVisualStyleBackColor = false;
             // 
             // SalesId
             // 
@@ -206,6 +172,52 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.editUserButton);
+            this.panel2.Controls.Add(this.addSalesButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 665);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 79);
+            this.panel2.TabIndex = 13;
+            // 
+            // editUserButton
+            // 
+            this.editUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.editUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.editUserButton.Location = new System.Drawing.Point(528, 12);
+            this.editUserButton.Name = "editUserButton";
+            this.editUserButton.Size = new System.Drawing.Size(128, 55);
+            this.editUserButton.TabIndex = 8;
+            this.editUserButton.Text = "View";
+            this.editUserButton.UseVisualStyleBackColor = false;
+            // 
+            // addSalesButton
+            // 
+            this.addSalesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSalesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.addSalesButton.Location = new System.Drawing.Point(662, 12);
+            this.addSalesButton.Name = "addSalesButton";
+            this.addSalesButton.Size = new System.Drawing.Size(128, 55);
+            this.addSalesButton.TabIndex = 7;
+            this.addSalesButton.Text = "Add";
+            this.addSalesButton.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.salesTable);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(800, 607);
+            this.panel1.TabIndex = 14;
+            // 
             // SalesListingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,8 +225,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 744);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.searchbox);
-            this.Controls.Add(this.salesTable);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SalesListingForm";
@@ -223,6 +235,7 @@
             this.searchbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesTable)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -240,5 +253,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Creation;
         private System.Windows.Forms.DataGridViewTextBoxColumn Customer;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.Panel panel1;
     }
 }

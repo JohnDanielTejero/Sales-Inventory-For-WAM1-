@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tejero__John_Daniel_M_Wam1_Inventory.Views;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory
 {
@@ -16,7 +17,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Entry());
         }
     }
 }

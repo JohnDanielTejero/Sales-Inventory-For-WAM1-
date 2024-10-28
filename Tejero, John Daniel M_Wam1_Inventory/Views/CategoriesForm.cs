@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tejero__John_Daniel_M_Wam1_Inventory
+namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
-    public partial class Form1 : Form
+    public partial class CategoriesForm : Form
     {
-        public Form1()
+        public CategoriesForm()
         {
             InitializeComponent();
         }

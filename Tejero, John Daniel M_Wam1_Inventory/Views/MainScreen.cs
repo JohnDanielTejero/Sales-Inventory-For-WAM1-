@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tejero__John_Daniel_M_Wam1_Inventory.Context;
+using Tejero__John_Daniel_M_Wam1_Inventory.Database.DAO;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
@@ -23,6 +24,17 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
         private void MainScreen_Load(object sender, EventArgs e)
         {
             this.loadform(new Dashboard());
+            User user = AppHelper.auth.getUser();
+
+            if(user.Role.RoleName != "Admin")
+            {
+                this.usersButton.Visible = false;
+            }
+
+            if (user.Role.RoleName != "Admin" && user.Role.RoleName != "Manager")
+            {
+                this.categoryButton.Visible = false;
+            }
         }
         public void loadform(object form)
         {

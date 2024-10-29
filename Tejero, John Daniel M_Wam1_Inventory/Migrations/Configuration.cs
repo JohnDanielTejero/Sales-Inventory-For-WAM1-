@@ -32,6 +32,12 @@
                 new User { Username = "Manager", Firstname = "Manager", Lastname = "Manager", RoleID = 2, Password = "wasdwasd" },
                 new User { Username = "Employee", Firstname = "Employee", Lastname = "Employee", RoleID = 3, Password = "wasdwasd" }
             );
+
+            context.Categories.AddOrUpdate(
+                r => r.CategoryID,
+                new Category { CategoryName = "General Items", Description = "Tag for General Items" },
+                new Category { CategoryName = "Electronic Items", Description = "Tag for Electronic Items" }
+            );
         }
     }
 }

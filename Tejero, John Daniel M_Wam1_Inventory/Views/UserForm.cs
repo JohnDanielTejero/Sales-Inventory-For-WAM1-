@@ -122,11 +122,11 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                             return;
                         }
                         // update user;
-                        this.target.Username = this.userFormUsername.Text;
-                        this.target.Firstname = this.userFormFirstName.Text;
-                        this.target.Lastname = this.userFormLastName.Text;
-                        this.target.Password = this.userFormPassword.Text;
-                        this.target.RoleID = AppHelper.db.Roles.FirstOrDefault(r => r.RoleName == this.userFormRole.Text).RoleID;
+                        this.target.Username = this.userFormUsername.Text.Trim();
+                        this.target.Firstname = this.userFormFirstName.Text.Trim();
+                        this.target.Lastname = this.userFormLastName.Text.Trim();
+                        this.target.Password = this.userFormPassword.Text.Trim();
+                    this.target.RoleID = selectedRole;
 
                         AppHelper.db.Users.AddOrUpdate(this.target);
                         AppHelper.db.SaveChanges();
@@ -143,7 +143,13 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
                         //insert user
                         AppHelper.db.Users.AddOrUpdate(
-                              new User { Username = this.userFormUsername.Text, Firstname = this.userFormFirstName.Text, Lastname = this.userFormLastName.Text, RoleID = selectedRole, Password = this.userFormPassword.Text }
+                              new User { 
+                                  Username = this.userFormUsername.Text.Trim(), 
+                                  Firstname = this.userFormFirstName.Text.Trim(), 
+                                  Lastname = this.userFormLastName.Text.Trim(), 
+                                  RoleID = selectedRole, 
+                                  Password = this.userFormPassword.Text.Trim() 
+                              }
                         );
                         AppHelper.db.SaveChanges();
 

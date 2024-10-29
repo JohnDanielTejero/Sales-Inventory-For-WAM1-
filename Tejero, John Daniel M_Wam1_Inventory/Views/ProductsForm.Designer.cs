@@ -39,12 +39,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.userFormFirstName = new System.Windows.Forms.TextBox();
+            this.productFormDesc = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.productFormPrice = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.productFormCancel = new System.Windows.Forms.Button();
-            this.userFormSubmitButton = new System.Windows.Forms.Button();
+            this.productFormSubmitButton = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.productFormName = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.productFormCancel);
-            this.panel4.Controls.Add(this.userFormSubmitButton);
+            this.panel4.Controls.Add(this.productFormSubmitButton);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(20, 20);
@@ -172,7 +172,7 @@
             // panel7
             // 
             this.panel7.Controls.Add(this.label3);
-            this.panel7.Controls.Add(this.userFormFirstName);
+            this.panel7.Controls.Add(this.productFormDesc);
             this.panel7.Location = new System.Drawing.Point(3, 148);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(354, 83);
@@ -191,18 +191,18 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Description";
             // 
-            // userFormFirstName
+            // productFormDesc
             // 
-            this.userFormFirstName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.userFormFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userFormFirstName.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.userFormFirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFormFirstName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.userFormFirstName.Location = new System.Drawing.Point(0, 23);
-            this.userFormFirstName.Multiline = true;
-            this.userFormFirstName.Name = "userFormFirstName";
-            this.userFormFirstName.Size = new System.Drawing.Size(354, 60);
-            this.userFormFirstName.TabIndex = 0;
+            this.productFormDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.productFormDesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productFormDesc.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.productFormDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productFormDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.productFormDesc.Location = new System.Drawing.Point(0, 23);
+            this.productFormDesc.Multiline = true;
+            this.productFormDesc.Name = "productFormDesc";
+            this.productFormDesc.Size = new System.Drawing.Size(354, 60);
+            this.productFormDesc.TabIndex = 0;
             // 
             // panel6
             // 
@@ -216,6 +216,7 @@
             // productFormPrice
             // 
             this.productFormPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.productFormPrice.DecimalPlaces = 2;
             this.productFormPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productFormPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.productFormPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
@@ -250,21 +251,22 @@
             this.productFormCancel.UseVisualStyleBackColor = true;
             this.productFormCancel.Click += new System.EventHandler(this.productFormCancel_Click);
             // 
-            // userFormSubmitButton
+            // productFormSubmitButton
             // 
-            this.userFormSubmitButton.AutoSize = true;
-            this.userFormSubmitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.userFormSubmitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.userFormSubmitButton.FlatAppearance.BorderSize = 0;
-            this.userFormSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.userFormSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.userFormSubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.userFormSubmitButton.Location = new System.Drawing.Point(184, 364);
-            this.userFormSubmitButton.Name = "userFormSubmitButton";
-            this.userFormSubmitButton.Size = new System.Drawing.Size(176, 55);
-            this.userFormSubmitButton.TabIndex = 9;
-            this.userFormSubmitButton.Text = "Add Product";
-            this.userFormSubmitButton.UseVisualStyleBackColor = false;
+            this.productFormSubmitButton.AutoSize = true;
+            this.productFormSubmitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.productFormSubmitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.productFormSubmitButton.FlatAppearance.BorderSize = 0;
+            this.productFormSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productFormSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.productFormSubmitButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.productFormSubmitButton.Location = new System.Drawing.Point(184, 364);
+            this.productFormSubmitButton.Name = "productFormSubmitButton";
+            this.productFormSubmitButton.Size = new System.Drawing.Size(176, 55);
+            this.productFormSubmitButton.TabIndex = 9;
+            this.productFormSubmitButton.Text = "Add Product";
+            this.productFormSubmitButton.UseVisualStyleBackColor = false;
+            this.productFormSubmitButton.Click += new System.EventHandler(this.productFormSubmitButton_Click);
             // 
             // panel5
             // 
@@ -345,6 +347,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductsForm";
             this.Text = "ProductsForm";
+            this.Load += new System.EventHandler(this.ProductsForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -378,11 +381,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox userFormFirstName;
+        private System.Windows.Forms.TextBox productFormDesc;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button productFormCancel;
-        private System.Windows.Forms.Button userFormSubmitButton;
+        private System.Windows.Forms.Button productFormSubmitButton;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox productFormName;

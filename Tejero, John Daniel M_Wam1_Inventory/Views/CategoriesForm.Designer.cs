@@ -41,7 +41,7 @@
             this.categoryFormName = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.userFormLabel = new System.Windows.Forms.Label();
+            this.categoryFormLabel = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -147,6 +147,7 @@
             this.categoryFormSubmitButton.TabIndex = 9;
             this.categoryFormSubmitButton.Text = "Add Category";
             this.categoryFormSubmitButton.UseVisualStyleBackColor = false;
+            this.categoryFormSubmitButton.Click += new System.EventHandler(this.categoryFormSubmitButton_Click);
             // 
             // panel5
             // 
@@ -196,24 +197,24 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.userFormLabel);
+            this.panel1.Controls.Add(this.categoryFormLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(798, 80);
             this.panel1.TabIndex = 2;
             // 
-            // userFormLabel
+            // categoryFormLabel
             // 
-            this.userFormLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.userFormLabel.AutoSize = true;
-            this.userFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFormLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.userFormLabel.Location = new System.Drawing.Point(27, 25);
-            this.userFormLabel.Name = "userFormLabel";
-            this.userFormLabel.Size = new System.Drawing.Size(204, 33);
-            this.userFormLabel.TabIndex = 2;
-            this.userFormLabel.Text = "Add Category";
+            this.categoryFormLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.categoryFormLabel.AutoSize = true;
+            this.categoryFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryFormLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.categoryFormLabel.Location = new System.Drawing.Point(27, 25);
+            this.categoryFormLabel.Name = "categoryFormLabel";
+            this.categoryFormLabel.Size = new System.Drawing.Size(204, 33);
+            this.categoryFormLabel.TabIndex = 2;
+            this.categoryFormLabel.Text = "Add Category";
             // 
             // CategoriesForm
             // 
@@ -257,6 +258,6 @@
         private System.Windows.Forms.TextBox categoryFormName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label userFormLabel;
+        private System.Windows.Forms.Label categoryFormLabel;
     }
 }

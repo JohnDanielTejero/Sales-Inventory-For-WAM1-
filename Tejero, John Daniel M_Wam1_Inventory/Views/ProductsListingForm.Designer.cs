@@ -33,18 +33,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.addProductButton = new System.Windows.Forms.Button();
-            this.deleteUserButton = new System.Windows.Forms.Button();
-            this.editUserButton = new System.Windows.Forms.Button();
+            this.deleteProductButton = new System.Windows.Forms.Button();
+            this.editProductButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewProductButton = new System.Windows.Forms.Button();
             this.productsTable = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.productSearchBox = new System.Windows.Forms.TextBox();
             this.searchbox = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stocks = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StockUpdatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsTable)).BeginInit();
             this.searchbox.SuspendLayout();
@@ -73,34 +76,37 @@
             this.addProductButton.UseVisualStyleBackColor = false;
             this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
-            // deleteUserButton
+            // deleteProductButton
             // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.deleteUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.deleteUserButton.Location = new System.Drawing.Point(12, 13);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(128, 55);
-            this.deleteUserButton.TabIndex = 9;
-            this.deleteUserButton.Text = "Delete";
-            this.deleteUserButton.UseVisualStyleBackColor = true;
+            this.deleteProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.deleteProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.deleteProductButton.Location = new System.Drawing.Point(12, 13);
+            this.deleteProductButton.Name = "deleteProductButton";
+            this.deleteProductButton.Size = new System.Drawing.Size(128, 55);
+            this.deleteProductButton.TabIndex = 9;
+            this.deleteProductButton.Text = "Delete";
+            this.deleteProductButton.UseVisualStyleBackColor = true;
+            this.deleteProductButton.Click += new System.EventHandler(this.deleteProductButton_Click);
             // 
-            // editUserButton
+            // editProductButton
             // 
-            this.editUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.editUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.editUserButton.Location = new System.Drawing.Point(528, 12);
-            this.editUserButton.Name = "editUserButton";
-            this.editUserButton.Size = new System.Drawing.Size(128, 55);
-            this.editUserButton.TabIndex = 8;
-            this.editUserButton.Text = "View";
-            this.editUserButton.UseVisualStyleBackColor = false;
+            this.editProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.editProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.editProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.editProductButton.Location = new System.Drawing.Point(528, 12);
+            this.editProductButton.Name = "editProductButton";
+            this.editProductButton.Size = new System.Drawing.Size(128, 55);
+            this.editProductButton.TabIndex = 8;
+            this.editProductButton.Text = "Edit";
+            this.editProductButton.UseVisualStyleBackColor = false;
+            this.editProductButton.Click += new System.EventHandler(this.editProductButton_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.editUserButton);
-            this.panel2.Controls.Add(this.deleteUserButton);
+            this.panel2.Controls.Add(this.viewProductButton);
+            this.panel2.Controls.Add(this.editProductButton);
+            this.panel2.Controls.Add(this.deleteProductButton);
             this.panel2.Controls.Add(this.addProductButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 642);
@@ -108,52 +114,19 @@
             this.panel2.Size = new System.Drawing.Size(798, 79);
             this.panel2.TabIndex = 13;
             // 
-            // Category
+            // viewProductButton
             // 
-            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Category.HeaderText = "Category";
-            this.Category.Name = "Category";
-            this.Category.ReadOnly = true;
-            // 
-            // Price
-            // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Price.FillWeight = 150F;
-            this.Price.Frozen = true;
-            this.Price.HeaderText = "Price";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            this.Price.Width = 199;
-            // 
-            // Description
-            // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Description.FillWeight = 300F;
-            this.Description.Frozen = true;
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 200;
-            // 
-            // ProductName
-            // 
-            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ProductName.FillWeight = 150F;
-            this.ProductName.Frozen = true;
-            this.ProductName.HeaderText = "Product Name";
-            this.ProductName.Name = "ProductName";
-            this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 199;
-            // 
-            // ProductId
-            // 
-            this.ProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ProductId.FillWeight = 50F;
-            this.ProductId.Frozen = true;
-            this.ProductId.HeaderText = "Id";
-            this.ProductId.Name = "ProductId";
-            this.ProductId.ReadOnly = true;
-            this.ProductId.Width = 67;
+            this.viewProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.viewProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.viewProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.viewProductButton.Location = new System.Drawing.Point(394, 13);
+            this.viewProductButton.Name = "viewProductButton";
+            this.viewProductButton.Size = new System.Drawing.Size(128, 55);
+            this.viewProductButton.TabIndex = 10;
+            this.viewProductButton.Text = "View";
+            this.viewProductButton.UseVisualStyleBackColor = false;
+            this.viewProductButton.Click += new System.EventHandler(this.viewProductButton_Click);
             // 
             // productsTable
             // 
@@ -180,7 +153,9 @@
             this.ProductName,
             this.Description,
             this.Price,
-            this.Category});
+            this.Category,
+            this.Stocks,
+            this.StockUpdatedDate});
             this.productsTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsTable.EnableHeadersVisualStyles = false;
             this.productsTable.GridColor = System.Drawing.Color.White;
@@ -211,20 +186,21 @@
             this.productsTable.Size = new System.Drawing.Size(788, 574);
             this.productsTable.TabIndex = 11;
             // 
-            // textBox1
+            // productSearchBox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.textBox1.Location = new System.Drawing.Point(9, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(776, 22);
-            this.textBox1.TabIndex = 0;
+            this.productSearchBox.BackColor = System.Drawing.Color.White;
+            this.productSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productSearchBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.productSearchBox.Location = new System.Drawing.Point(9, 26);
+            this.productSearchBox.Name = "productSearchBox";
+            this.productSearchBox.Size = new System.Drawing.Size(776, 22);
+            this.productSearchBox.TabIndex = 0;
+            this.productSearchBox.TextChanged += new System.EventHandler(this.productSearchBox_TextChanged);
             // 
             // searchbox
             // 
             this.searchbox.BackColor = System.Drawing.Color.Transparent;
-            this.searchbox.Controls.Add(this.textBox1);
+            this.searchbox.Controls.Add(this.productSearchBox);
             this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchbox.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -249,6 +225,61 @@
             this.panel1.Size = new System.Drawing.Size(798, 584);
             this.panel1.TabIndex = 14;
             // 
+            // ProductId
+            // 
+            this.ProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductId.FillWeight = 50F;
+            this.ProductId.HeaderText = "Id";
+            this.ProductId.Name = "ProductId";
+            this.ProductId.ReadOnly = true;
+            this.ProductId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // ProductName
+            // 
+            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProductName.FillWeight = 150F;
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Description.FillWeight = 300F;
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            // 
+            // Price
+            // 
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Price.HeaderText = "Price";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 199;
+            // 
+            // Category
+            // 
+            this.Category.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Category.HeaderText = "Category";
+            this.Category.Name = "Category";
+            this.Category.ReadOnly = true;
+            // 
+            // Stocks
+            // 
+            this.Stocks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Stocks.HeaderText = "Quantity";
+            this.Stocks.Name = "Stocks";
+            this.Stocks.ReadOnly = true;
+            // 
+            // StockUpdatedDate
+            // 
+            this.StockUpdatedDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StockUpdatedDate.FillWeight = 200F;
+            this.StockUpdatedDate.HeaderText = "Last Stock Update";
+            this.StockUpdatedDate.Name = "StockUpdatedDate";
+            this.StockUpdatedDate.ReadOnly = true;
+            // 
             // ProductsListingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,6 +293,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductsListingForm";
             this.Text = "ProductsForm";
+            this.Load += new System.EventHandler(this.ProductListing_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productsTable)).EndInit();
             this.searchbox.ResumeLayout(false);
@@ -276,17 +308,20 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addProductButton;
-        private System.Windows.Forms.Button deleteUserButton;
-        private System.Windows.Forms.Button editUserButton;
+        private System.Windows.Forms.Button deleteProductButton;
+        private System.Windows.Forms.Button editProductButton;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
         private System.Windows.Forms.DataGridView productsTable;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox productSearchBox;
         private System.Windows.Forms.GroupBox searchbox;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button viewProductButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stocks;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StockUpdatedDate;
     }
 }

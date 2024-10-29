@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchbox = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.userSearchTextbox = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addUserButton = new System.Windows.Forms.Button();
-            this.editUserButton = new System.Windows.Forms.Button();
-            this.deleteUserButton = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.userTable = new System.Windows.Forms.DataGridView();
             this.UserId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addUserButton = new System.Windows.Forms.Button();
+            this.editUserButton = new System.Windows.Forms.Button();
+            this.deleteUserButton = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.viewUserButton = new System.Windows.Forms.Button();
             this.searchbox.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchbox
             // 
             this.searchbox.BackColor = System.Drawing.Color.Transparent;
-            this.searchbox.Controls.Add(this.textBox1);
+            this.searchbox.Controls.Add(this.userSearchTextbox);
             this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchbox.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -69,15 +70,16 @@
             this.searchbox.Text = "Search";
             this.searchbox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox1
+            // userSearchTextbox
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.textBox1.Location = new System.Drawing.Point(9, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(780, 22);
-            this.textBox1.TabIndex = 0;
+            this.userSearchTextbox.BackColor = System.Drawing.Color.White;
+            this.userSearchTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.userSearchTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.userSearchTextbox.Location = new System.Drawing.Point(9, 26);
+            this.userSearchTextbox.Name = "userSearchTextbox";
+            this.userSearchTextbox.Size = new System.Drawing.Size(780, 22);
+            this.userSearchTextbox.TabIndex = 0;
+            this.userSearchTextbox.TextChanged += new System.EventHandler(this.userSearchTextbox_TextChanged);
             // 
             // panel1
             // 
@@ -89,55 +91,6 @@
             this.panel1.Size = new System.Drawing.Size(802, 544);
             this.panel1.TabIndex = 6;
             // 
-            // addUserButton
-            // 
-            this.addUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.addUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.addUserButton.Location = new System.Drawing.Point(662, 12);
-            this.addUserButton.Name = "addUserButton";
-            this.addUserButton.Size = new System.Drawing.Size(128, 55);
-            this.addUserButton.TabIndex = 7;
-            this.addUserButton.Text = "Add";
-            this.addUserButton.UseVisualStyleBackColor = false;
-            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
-            // 
-            // editUserButton
-            // 
-            this.editUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.editUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.editUserButton.Location = new System.Drawing.Point(528, 12);
-            this.editUserButton.Name = "editUserButton";
-            this.editUserButton.Size = new System.Drawing.Size(128, 55);
-            this.editUserButton.TabIndex = 8;
-            this.editUserButton.Text = "View";
-            this.editUserButton.UseVisualStyleBackColor = false;
-            // 
-            // deleteUserButton
-            // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.deleteUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.deleteUserButton.Location = new System.Drawing.Point(12, 13);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(128, 55);
-            this.deleteUserButton.TabIndex = 9;
-            this.deleteUserButton.Text = "Delete";
-            this.deleteUserButton.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.editUserButton);
-            this.panel2.Controls.Add(this.deleteUserButton);
-            this.panel2.Controls.Add(this.addUserButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 608);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(802, 79);
-            this.panel2.TabIndex = 10;
-            // 
             // userTable
             // 
             this.userTable.AllowUserToAddRows = false;
@@ -148,14 +101,14 @@
             this.userTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.userTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.userTable.ColumnHeadersHeight = 40;
             this.userTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.userTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -172,23 +125,23 @@
             this.userTable.Name = "userTable";
             this.userTable.ReadOnly = true;
             this.userTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.userTable.RowHeadersVisible = false;
             this.userTable.RowHeadersWidth = 25;
             this.userTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.userTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.userTable.RowTemplate.Height = 25;
             this.userTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.userTable.Size = new System.Drawing.Size(792, 534);
@@ -233,7 +186,73 @@
             this.Role.Name = "Role";
             this.Role.ReadOnly = true;
             // 
-            // UsersForm
+            // addUserButton
+            // 
+            this.addUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.addUserButton.Location = new System.Drawing.Point(662, 12);
+            this.addUserButton.Name = "addUserButton";
+            this.addUserButton.Size = new System.Drawing.Size(128, 55);
+            this.addUserButton.TabIndex = 7;
+            this.addUserButton.Text = "Add";
+            this.addUserButton.UseVisualStyleBackColor = false;
+            this.addUserButton.Click += new System.EventHandler(this.addUserButton_Click);
+            // 
+            // editUserButton
+            // 
+            this.editUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.editUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.editUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.editUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.editUserButton.Location = new System.Drawing.Point(528, 12);
+            this.editUserButton.Name = "editUserButton";
+            this.editUserButton.Size = new System.Drawing.Size(128, 55);
+            this.editUserButton.TabIndex = 8;
+            this.editUserButton.Text = "Edit";
+            this.editUserButton.UseVisualStyleBackColor = false;
+            this.editUserButton.Click += new System.EventHandler(this.editUserButton_Click);
+            // 
+            // deleteUserButton
+            // 
+            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.deleteUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.deleteUserButton.Location = new System.Drawing.Point(12, 13);
+            this.deleteUserButton.Name = "deleteUserButton";
+            this.deleteUserButton.Size = new System.Drawing.Size(128, 55);
+            this.deleteUserButton.TabIndex = 9;
+            this.deleteUserButton.Text = "Delete";
+            this.deleteUserButton.UseVisualStyleBackColor = true;
+            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.viewUserButton);
+            this.panel2.Controls.Add(this.editUserButton);
+            this.panel2.Controls.Add(this.deleteUserButton);
+            this.panel2.Controls.Add(this.addUserButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 608);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(802, 79);
+            this.panel2.TabIndex = 10;
+            // 
+            // viewUserButton
+            // 
+            this.viewUserButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.viewUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.viewUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.viewUserButton.Location = new System.Drawing.Point(394, 12);
+            this.viewUserButton.Name = "viewUserButton";
+            this.viewUserButton.Size = new System.Drawing.Size(128, 55);
+            this.viewUserButton.TabIndex = 10;
+            this.viewUserButton.Text = "View";
+            this.viewUserButton.UseVisualStyleBackColor = false;
+            this.viewUserButton.Click += new System.EventHandler(this.viewUserButton_Click);
+            // 
+            // UsersListingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -243,22 +262,22 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.searchbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UsersForm";
+            this.Name = "UsersListingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "UsersForm";
             this.Load += new System.EventHandler(this.UsersForm_Load);
             this.searchbox.ResumeLayout(false);
             this.searchbox.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userTable)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox searchbox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox userSearchTextbox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button addUserButton;
         private System.Windows.Forms.Button editUserButton;
@@ -270,5 +289,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Role;
+        private System.Windows.Forms.Button viewUserButton;
     }
 }

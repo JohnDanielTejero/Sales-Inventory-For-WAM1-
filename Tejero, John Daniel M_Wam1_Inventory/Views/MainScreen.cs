@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tejero__John_Daniel_M_Wam1_Inventory.Context;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
+
     public partial class MainScreen : Form
     {
+
         public MainScreen()
         {
             InitializeComponent();
@@ -67,24 +70,18 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
         private void logoutButton_MouseClick(object sender, MouseEventArgs e)
         {
-            this.logout();
+            AppHelper.auth.logout(this);
         }
 
-        private void logout()
-        {
-            Entry entry = new Entry();
-            entry.Show();
-            this.Close();
-        }
 
         private void logoutButtonIcon_Click(object sender, EventArgs e)
         {
-            this.logout();
+            AppHelper.auth.logout(this);
         }
 
         private void logoutButtonLabel_Click(object sender, EventArgs e)
         {
-            this.logout();
+            AppHelper.auth.logout(this);
         }
 
         private void usersButton_Click(object sender, EventArgs e)

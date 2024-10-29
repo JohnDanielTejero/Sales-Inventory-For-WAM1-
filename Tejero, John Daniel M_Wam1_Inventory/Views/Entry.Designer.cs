@@ -147,6 +147,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
             this.Name = "Entry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Entry_Load);
             this.panel1.ResumeLayout(false);
             this.customPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

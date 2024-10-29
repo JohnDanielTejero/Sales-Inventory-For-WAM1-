@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tejero__John_Daniel_M_Wam1_Inventory.Database.Context;
 using Tejero__John_Daniel_M_Wam1_Inventory.Database.DAO;
 using Tejero__John_Daniel_M_Wam1_Inventory.Views;
 
@@ -11,37 +12,21 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Context
 {
     public class AuthContext
     {
-        private static AuthContext _instance = null;
-        private static readonly object _lock = new object();
-        private static User user;
-
-        public static AuthContext Instance()
+        private User user;
+       
+        public void login(User u)
         {
-            lock (_lock)
-            {
-                if (_instance == null)
-                    _instance = new AuthContext();
-                return _instance;
-            }
+            this.user = u;
         }
-
-        public static void login(User u)
-        {
-            user = u;
-        }
-
-        public static void logout(Form f) {
+        public void logout(Form f) {
+            this.user = null;
+            Entry entry = new Entry();
+            entry.Show();
             f.Close();
-            Entry e = new Entry();
-            e.Show();
-            user = null;
         }
 
-        public static User getUser() {
-            return user;
+        public User getUser() {
+            return this.user;
         }
-
-        //need more efficient way of automating navigation
-        
     }
 }

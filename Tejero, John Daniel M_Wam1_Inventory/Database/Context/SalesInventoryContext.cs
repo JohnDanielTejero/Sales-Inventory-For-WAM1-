@@ -60,7 +60,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Database.Context
                 .HasRequired(s => s.User)
                 .WithMany(u => u.Sales)
                 .HasForeignKey(s => s.UserID);
-        
+
         }
     }
 

@@ -18,5 +18,10 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
             InitializeComponent();
             this.parentFormAction = loadform;
         }
+
+        private void addSalesButton_Click(object sender, EventArgs e)
+        {
+            this.parentFormAction(new AddSalesForm(this.parentFormAction));
+        }
     }
 }

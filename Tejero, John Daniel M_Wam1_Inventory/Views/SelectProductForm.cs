@@ -12,9 +12,11 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
     public partial class SelectProductForm : Form
     {
-        public SelectProductForm()
+        private Action<object> parentFormAction;
+        public SelectProductForm(Action<object> parentFormAction)
         {
             InitializeComponent();
+            this.parentFormAction = parentFormAction;
         }
     }
 }

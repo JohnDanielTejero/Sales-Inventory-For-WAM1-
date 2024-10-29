@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.productFormName = new System.Windows.Forms.TextBox();
-            this.userFormLabel = new System.Windows.Forms.Label();
-            this.deleteUserButton = new System.Windows.Forms.Button();
-            this.addProductButton = new System.Windows.Forms.Button();
+            this.addSalesFormTotalLabel = new System.Windows.Forms.Label();
+            this.addSalesCancelButton = new System.Windows.Forms.Button();
+            this.addSalesCheckoutButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +49,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addSalesDeleteProduct = new System.Windows.Forms.Button();
+            this.addSalesAddProduct = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -63,9 +63,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.userFormLabel);
-            this.panel2.Controls.Add(this.deleteUserButton);
-            this.panel2.Controls.Add(this.addProductButton);
+            this.panel2.Controls.Add(this.addSalesFormTotalLabel);
+            this.panel2.Controls.Add(this.addSalesCancelButton);
+            this.panel2.Controls.Add(this.addSalesCheckoutButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 568);
             this.panel2.Name = "panel2";
@@ -106,44 +106,44 @@
             this.productFormName.Size = new System.Drawing.Size(290, 24);
             this.productFormName.TabIndex = 0;
             // 
-            // userFormLabel
+            // addSalesFormTotalLabel
             // 
-            this.userFormLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.userFormLabel.AutoSize = true;
-            this.userFormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userFormLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.userFormLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.userFormLabel.Location = new System.Drawing.Point(498, 73);
-            this.userFormLabel.Name = "userFormLabel";
-            this.userFormLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.userFormLabel.Size = new System.Drawing.Size(180, 33);
-            this.userFormLabel.TabIndex = 10;
-            this.userFormLabel.Text = "Total: $3.00";
-            this.userFormLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addSalesFormTotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.addSalesFormTotalLabel.AutoSize = true;
+            this.addSalesFormTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSalesFormTotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesFormTotalLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.addSalesFormTotalLabel.Location = new System.Drawing.Point(498, 73);
+            this.addSalesFormTotalLabel.Name = "addSalesFormTotalLabel";
+            this.addSalesFormTotalLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.addSalesFormTotalLabel.Size = new System.Drawing.Size(180, 33);
+            this.addSalesFormTotalLabel.TabIndex = 10;
+            this.addSalesFormTotalLabel.Text = "Total: $3.00";
+            this.addSalesFormTotalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // deleteUserButton
+            // addSalesCancelButton
             // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.deleteUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.deleteUserButton.Location = new System.Drawing.Point(498, 109);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(141, 55);
-            this.deleteUserButton.TabIndex = 9;
-            this.deleteUserButton.Text = "Cancel";
-            this.deleteUserButton.UseVisualStyleBackColor = true;
+            this.addSalesCancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.addSalesCancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesCancelButton.Location = new System.Drawing.Point(498, 109);
+            this.addSalesCancelButton.Name = "addSalesCancelButton";
+            this.addSalesCancelButton.Size = new System.Drawing.Size(141, 55);
+            this.addSalesCancelButton.TabIndex = 9;
+            this.addSalesCancelButton.Text = "Cancel";
+            this.addSalesCancelButton.UseVisualStyleBackColor = true;
             // 
-            // addProductButton
+            // addSalesCheckoutButton
             // 
-            this.addProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.addProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.addProductButton.Location = new System.Drawing.Point(645, 109);
-            this.addProductButton.Name = "addProductButton";
-            this.addProductButton.Size = new System.Drawing.Size(143, 55);
-            this.addProductButton.TabIndex = 7;
-            this.addProductButton.Text = "Checkout";
-            this.addProductButton.UseVisualStyleBackColor = false;
+            this.addSalesCheckoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesCheckoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSalesCheckoutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSalesCheckoutButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.addSalesCheckoutButton.Location = new System.Drawing.Point(645, 109);
+            this.addSalesCheckoutButton.Name = "addSalesCheckoutButton";
+            this.addSalesCheckoutButton.Size = new System.Drawing.Size(143, 55);
+            this.addSalesCheckoutButton.TabIndex = 7;
+            this.addSalesCheckoutButton.Text = "Checkout";
+            this.addSalesCheckoutButton.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -222,14 +222,14 @@
             this.productsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.productsTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.productsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.productsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.productsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.productsTable.ColumnHeadersHeight = 40;
             this.productsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.productsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -246,23 +246,23 @@
             this.productsTable.Name = "productsTable";
             this.productsTable.ReadOnly = true;
             this.productsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.productsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.productsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.productsTable.RowHeadersVisible = false;
             this.productsTable.RowHeadersWidth = 25;
             this.productsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.productsTable.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.productsTable.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.productsTable.RowTemplate.Height = 25;
             this.productsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.productsTable.Size = new System.Drawing.Size(800, 418);
@@ -289,37 +289,38 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.addSalesDeleteProduct);
+            this.panel4.Controls.Add(this.addSalesAddProduct);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(800, 76);
             this.panel4.TabIndex = 15;
             // 
-            // button2
+            // addSalesDeleteProduct
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.button2.Location = new System.Drawing.Point(158, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 55);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Delete Product";
-            this.button2.UseVisualStyleBackColor = true;
+            this.addSalesDeleteProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.addSalesDeleteProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesDeleteProduct.Location = new System.Drawing.Point(158, 9);
+            this.addSalesDeleteProduct.Name = "addSalesDeleteProduct";
+            this.addSalesDeleteProduct.Size = new System.Drawing.Size(141, 55);
+            this.addSalesDeleteProduct.TabIndex = 10;
+            this.addSalesDeleteProduct.Text = "Delete Product";
+            this.addSalesDeleteProduct.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // addSalesAddProduct
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(9, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 55);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Add Product";
-            this.button1.UseVisualStyleBackColor = false;
+            this.addSalesAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addSalesAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSalesAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addSalesAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.addSalesAddProduct.Location = new System.Drawing.Point(9, 9);
+            this.addSalesAddProduct.Name = "addSalesAddProduct";
+            this.addSalesAddProduct.Size = new System.Drawing.Size(143, 55);
+            this.addSalesAddProduct.TabIndex = 8;
+            this.addSalesAddProduct.Text = "Add Product";
+            this.addSalesAddProduct.UseVisualStyleBackColor = false;
+            this.addSalesAddProduct.Click += new System.EventHandler(this.addSalesAddProduct_Click);
             // 
             // AddSalesForm
             // 
@@ -350,8 +351,8 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button deleteUserButton;
-        private System.Windows.Forms.Button addProductButton;
+        private System.Windows.Forms.Button addSalesCancelButton;
+        private System.Windows.Forms.Button addSalesCheckoutButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
@@ -360,14 +361,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
         private System.Windows.Forms.DataGridView productsTable;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label userFormLabel;
+        private System.Windows.Forms.Label addSalesFormTotalLabel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox productFormName;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addSalesDeleteProduct;
+        private System.Windows.Forms.Button addSalesAddProduct;
         private System.Windows.Forms.Label label7;
     }
 }

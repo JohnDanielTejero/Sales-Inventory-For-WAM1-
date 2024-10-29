@@ -12,9 +12,22 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
     public partial class AddSalesForm : Form
     {
-        public AddSalesForm()
+        private Action<object> parentActionForm;
+        public AddSalesForm(Action<object> parentActionForm)
         {
             InitializeComponent();
+            this.parentActionForm = parentActionForm;
+        }
+
+        private void addSalesItem(object salesItem)
+        {
+            //TODO: logic for adding sales product
+
+        }
+        private void addSalesAddProduct_Click(object sender, EventArgs e)
+        {
+            SelectProductForm selectProduct = new SelectProductForm(addSalesItem);
+            selectProduct.Show();
         }
     }
 }

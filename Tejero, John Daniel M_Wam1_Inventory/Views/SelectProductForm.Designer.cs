@@ -33,12 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectProductForm));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.deleteUserButton = new System.Windows.Forms.Button();
-            this.addProductButton = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.productFormQuantity = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.cancelProductButton = new System.Windows.Forms.Button();
+            this.addProductButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.searchbox = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.productsTable = new System.Windows.Forms.DataGridView();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,60 +48,26 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchbox = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productFormQuantity)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.searchbox.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsTable)).BeginInit();
-            this.searchbox.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel8);
-            this.panel2.Controls.Add(this.deleteUserButton);
+            this.panel2.Controls.Add(this.cancelProductButton);
             this.panel2.Controls.Add(this.addProductButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 611);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 133);
             this.panel2.TabIndex = 19;
-            // 
-            // deleteUserButton
-            // 
-            this.deleteUserButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.deleteUserButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.deleteUserButton.Location = new System.Drawing.Point(498, 68);
-            this.deleteUserButton.Name = "deleteUserButton";
-            this.deleteUserButton.Size = new System.Drawing.Size(141, 55);
-            this.deleteUserButton.TabIndex = 9;
-            this.deleteUserButton.Text = "Cancel";
-            this.deleteUserButton.UseVisualStyleBackColor = true;
-            // 
-            // addProductButton
-            // 
-            this.addProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.addProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.addProductButton.Location = new System.Drawing.Point(645, 68);
-            this.addProductButton.Name = "addProductButton";
-            this.addProductButton.Size = new System.Drawing.Size(143, 55);
-            this.addProductButton.TabIndex = 7;
-            this.addProductButton.Text = "Checkout";
-            this.addProductButton.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.searchbox);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(800, 58);
-            this.panel4.TabIndex = 18;
             // 
             // panel8
             // 
@@ -133,6 +101,67 @@
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Quantity";
+            // 
+            // cancelProductButton
+            // 
+            this.cancelProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.cancelProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.cancelProductButton.Location = new System.Drawing.Point(498, 68);
+            this.cancelProductButton.Name = "cancelProductButton";
+            this.cancelProductButton.Size = new System.Drawing.Size(141, 55);
+            this.cancelProductButton.TabIndex = 9;
+            this.cancelProductButton.Text = "Cancel";
+            this.cancelProductButton.UseVisualStyleBackColor = true;
+            // 
+            // addProductButton
+            // 
+            this.addProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.addProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.addProductButton.Location = new System.Drawing.Point(645, 68);
+            this.addProductButton.Name = "addProductButton";
+            this.addProductButton.Size = new System.Drawing.Size(143, 55);
+            this.addProductButton.TabIndex = 7;
+            this.addProductButton.Text = "Checkout";
+            this.addProductButton.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.searchbox);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(800, 58);
+            this.panel4.TabIndex = 18;
+            // 
+            // searchbox
+            // 
+            this.searchbox.BackColor = System.Drawing.Color.Transparent;
+            this.searchbox.Controls.Add(this.textBox1);
+            this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchbox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.searchbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.searchbox.Location = new System.Drawing.Point(0, 0);
+            this.searchbox.Margin = new System.Windows.Forms.Padding(0);
+            this.searchbox.Name = "searchbox";
+            this.searchbox.Padding = new System.Windows.Forms.Padding(10);
+            this.searchbox.Size = new System.Drawing.Size(800, 58);
+            this.searchbox.TabIndex = 13;
+            this.searchbox.TabStop = false;
+            this.searchbox.Text = "Search";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.textBox1.Location = new System.Drawing.Point(9, 26);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(778, 22);
+            this.textBox1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -169,7 +198,8 @@
             this.ProductName,
             this.Description,
             this.Price,
-            this.Category});
+            this.Category,
+            this.Quantity});
             this.productsTable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.productsTable.EnableHeadersVisualStyles = false;
             this.productsTable.GridColor = System.Drawing.Color.White;
@@ -202,43 +232,35 @@
             // 
             // ProductId
             // 
-            this.ProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ProductId.FillWeight = 50F;
-            this.ProductId.Frozen = true;
             this.ProductId.HeaderText = "Id";
             this.ProductId.Name = "ProductId";
             this.ProductId.ReadOnly = true;
-            this.ProductId.Width = 67;
             // 
             // ProductName
             // 
-            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ProductName.FillWeight = 150F;
-            this.ProductName.Frozen = true;
             this.ProductName.HeaderText = "Product Name";
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 199;
             // 
             // Description
             // 
-            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Description.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Description.FillWeight = 300F;
-            this.Description.Frozen = true;
             this.Description.HeaderText = "Description";
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
-            this.Description.Width = 200;
             // 
             // Price
             // 
-            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Price.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Price.FillWeight = 150F;
-            this.Price.Frozen = true;
             this.Price.HeaderText = "Price";
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
-            this.Price.Width = 199;
             // 
             // Category
             // 
@@ -247,33 +269,12 @@
             this.Category.Name = "Category";
             this.Category.ReadOnly = true;
             // 
-            // searchbox
+            // Quantity
             // 
-            this.searchbox.BackColor = System.Drawing.Color.Transparent;
-            this.searchbox.Controls.Add(this.textBox1);
-            this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchbox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.searchbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.searchbox.Location = new System.Drawing.Point(0, 0);
-            this.searchbox.Margin = new System.Windows.Forms.Padding(0);
-            this.searchbox.Name = "searchbox";
-            this.searchbox.Padding = new System.Windows.Forms.Padding(10);
-            this.searchbox.Size = new System.Drawing.Size(800, 58);
-            this.searchbox.TabIndex = 13;
-            this.searchbox.TabStop = false;
-            this.searchbox.Text = "Search";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.textBox1.Location = new System.Drawing.Point(9, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(778, 22);
-            this.textBox1.TabIndex = 0;
+            this.Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Quantity.HeaderText = "Stock";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
             // SelectProductForm
             // 
@@ -288,16 +289,17 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SelectProductForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Product";
             this.panel2.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productFormQuantity)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.productsTable)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.searchbox.ResumeLayout(false);
             this.searchbox.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.productsTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -305,7 +307,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button deleteUserButton;
+        private System.Windows.Forms.Button cancelProductButton;
         private System.Windows.Forms.Button addProductButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel8;
@@ -313,12 +315,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView productsTable;
+        private System.Windows.Forms.GroupBox searchbox;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Category;
-        private System.Windows.Forms.GroupBox searchbox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }

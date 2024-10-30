@@ -38,9 +38,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.viewProductButton = new System.Windows.Forms.Button();
             this.productsTable = new System.Windows.Forms.DataGridView();
-            this.productSearchBox = new System.Windows.Forms.TextBox();
-            this.searchbox = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.ProductId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +45,9 @@
             this.Category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stocks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StockUpdatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productSearchBox = new System.Windows.Forms.TextBox();
+            this.searchbox = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsTable)).BeginInit();
             this.searchbox.SuspendLayout();
@@ -94,7 +94,7 @@
             this.editProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.editProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.editProductButton.Location = new System.Drawing.Point(528, 12);
+            this.editProductButton.Location = new System.Drawing.Point(394, 13);
             this.editProductButton.Name = "editProductButton";
             this.editProductButton.Size = new System.Drawing.Size(128, 55);
             this.editProductButton.TabIndex = 8;
@@ -120,7 +120,7 @@
             this.viewProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.viewProductButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.viewProductButton.Location = new System.Drawing.Point(394, 13);
+            this.viewProductButton.Location = new System.Drawing.Point(528, 12);
             this.viewProductButton.Name = "viewProductButton";
             this.viewProductButton.Size = new System.Drawing.Size(128, 55);
             this.viewProductButton.TabIndex = 10;
@@ -186,45 +186,6 @@
             this.productsTable.Size = new System.Drawing.Size(788, 574);
             this.productsTable.TabIndex = 11;
             // 
-            // productSearchBox
-            // 
-            this.productSearchBox.BackColor = System.Drawing.Color.White;
-            this.productSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.productSearchBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.productSearchBox.Location = new System.Drawing.Point(9, 26);
-            this.productSearchBox.Name = "productSearchBox";
-            this.productSearchBox.Size = new System.Drawing.Size(776, 22);
-            this.productSearchBox.TabIndex = 0;
-            this.productSearchBox.TextChanged += new System.EventHandler(this.productSearchBox_TextChanged);
-            // 
-            // searchbox
-            // 
-            this.searchbox.BackColor = System.Drawing.Color.Transparent;
-            this.searchbox.Controls.Add(this.productSearchBox);
-            this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchbox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.searchbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.searchbox.Location = new System.Drawing.Point(0, 0);
-            this.searchbox.Margin = new System.Windows.Forms.Padding(0);
-            this.searchbox.Name = "searchbox";
-            this.searchbox.Padding = new System.Windows.Forms.Padding(10);
-            this.searchbox.Size = new System.Drawing.Size(798, 58);
-            this.searchbox.TabIndex = 12;
-            this.searchbox.TabStop = false;
-            this.searchbox.Text = "Search";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.productsTable);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 58);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(798, 584);
-            this.panel1.TabIndex = 14;
-            // 
             // ProductId
             // 
             this.ProductId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -279,6 +240,45 @@
             this.StockUpdatedDate.HeaderText = "Last Stock Update";
             this.StockUpdatedDate.Name = "StockUpdatedDate";
             this.StockUpdatedDate.ReadOnly = true;
+            // 
+            // productSearchBox
+            // 
+            this.productSearchBox.BackColor = System.Drawing.Color.White;
+            this.productSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.productSearchBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.productSearchBox.Location = new System.Drawing.Point(9, 26);
+            this.productSearchBox.Name = "productSearchBox";
+            this.productSearchBox.Size = new System.Drawing.Size(776, 22);
+            this.productSearchBox.TabIndex = 0;
+            this.productSearchBox.TextChanged += new System.EventHandler(this.productSearchBox_TextChanged);
+            // 
+            // searchbox
+            // 
+            this.searchbox.BackColor = System.Drawing.Color.Transparent;
+            this.searchbox.Controls.Add(this.productSearchBox);
+            this.searchbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchbox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchbox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.searchbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.searchbox.Location = new System.Drawing.Point(0, 0);
+            this.searchbox.Margin = new System.Windows.Forms.Padding(0);
+            this.searchbox.Name = "searchbox";
+            this.searchbox.Padding = new System.Windows.Forms.Padding(10);
+            this.searchbox.Size = new System.Drawing.Size(798, 58);
+            this.searchbox.TabIndex = 12;
+            this.searchbox.TabStop = false;
+            this.searchbox.Text = "Search";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.productsTable);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.panel1.Size = new System.Drawing.Size(798, 584);
+            this.panel1.TabIndex = 14;
             // 
             // ProductsListingForm
             // 

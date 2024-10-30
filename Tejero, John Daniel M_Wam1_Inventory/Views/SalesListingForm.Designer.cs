@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchbox = new System.Windows.Forms.GroupBox();
             this.salesSearchBox = new System.Windows.Forms.TextBox();
             this.salesTable = new System.Windows.Forms.DataGridView();
@@ -40,10 +40,10 @@
             this.Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.viewSalesButton = new System.Windows.Forms.Button();
             this.editSalesButton = new System.Windows.Forms.Button();
             this.addSalesButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.viewSalesButton = new System.Windows.Forms.Button();
             this.searchbox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesTable)).BeginInit();
             this.panel2.SuspendLayout();
@@ -77,6 +77,7 @@
             this.salesSearchBox.Name = "salesSearchBox";
             this.salesSearchBox.Size = new System.Drawing.Size(778, 22);
             this.salesSearchBox.TabIndex = 0;
+            this.salesSearchBox.TextChanged += new System.EventHandler(this.salesSearchBox_TextChanged);
             // 
             // salesTable
             // 
@@ -88,14 +89,14 @@
             this.salesTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.salesTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.salesTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.salesTable.ColumnHeadersHeight = 40;
             this.salesTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.salesTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -112,23 +113,23 @@
             this.salesTable.Name = "salesTable";
             this.salesTable.ReadOnly = true;
             this.salesTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.salesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.salesTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.salesTable.RowHeadersVisible = false;
             this.salesTable.RowHeadersWidth = 25;
             this.salesTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.salesTable.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(193)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.salesTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.salesTable.RowTemplate.Height = 25;
             this.salesTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.salesTable.Size = new System.Drawing.Size(790, 597);
@@ -184,18 +185,33 @@
             this.panel2.Size = new System.Drawing.Size(800, 79);
             this.panel2.TabIndex = 13;
             // 
+            // viewSalesButton
+            // 
+            this.viewSalesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
+            this.viewSalesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewSalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.viewSalesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.viewSalesButton.Location = new System.Drawing.Point(529, 12);
+            this.viewSalesButton.Name = "viewSalesButton";
+            this.viewSalesButton.Size = new System.Drawing.Size(128, 55);
+            this.viewSalesButton.TabIndex = 9;
+            this.viewSalesButton.Text = "View";
+            this.viewSalesButton.UseVisualStyleBackColor = false;
+            this.viewSalesButton.Click += new System.EventHandler(this.viewSalesButton_Click);
+            // 
             // editSalesButton
             // 
             this.editSalesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
             this.editSalesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editSalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.editSalesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.editSalesButton.Location = new System.Drawing.Point(528, 12);
+            this.editSalesButton.Location = new System.Drawing.Point(395, 12);
             this.editSalesButton.Name = "editSalesButton";
             this.editSalesButton.Size = new System.Drawing.Size(128, 55);
             this.editSalesButton.TabIndex = 8;
             this.editSalesButton.Text = "Edit";
             this.editSalesButton.UseVisualStyleBackColor = false;
+            this.editSalesButton.Click += new System.EventHandler(this.editSalesButton_Click);
             // 
             // addSalesButton
             // 
@@ -221,19 +237,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 607);
             this.panel1.TabIndex = 14;
             // 
-            // viewSalesButton
-            // 
-            this.viewSalesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.viewSalesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewSalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.viewSalesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.viewSalesButton.Location = new System.Drawing.Point(394, 12);
-            this.viewSalesButton.Name = "viewSalesButton";
-            this.viewSalesButton.Size = new System.Drawing.Size(128, 55);
-            this.viewSalesButton.TabIndex = 9;
-            this.viewSalesButton.Text = "View";
-            this.viewSalesButton.UseVisualStyleBackColor = false;
-            // 
             // SalesListingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,6 +250,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SalesListingForm";
             this.Text = "Sales";
+            this.Load += new System.EventHandler(this.SalesListing_Load);
             this.searchbox.ResumeLayout(false);
             this.searchbox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salesTable)).EndInit();

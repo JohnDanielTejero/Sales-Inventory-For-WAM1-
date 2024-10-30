@@ -85,6 +85,11 @@
             this.productFormQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.productFormQuantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
             this.productFormQuantity.Location = new System.Drawing.Point(0, 20);
+            this.productFormQuantity.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.productFormQuantity.Name = "productFormQuantity";
             this.productFormQuantity.Size = new System.Drawing.Size(290, 31);
             this.productFormQuantity.TabIndex = 2;
@@ -112,6 +117,7 @@
             this.cancelProductButton.TabIndex = 9;
             this.cancelProductButton.Text = "Cancel";
             this.cancelProductButton.UseVisualStyleBackColor = true;
+            this.cancelProductButton.Click += new System.EventHandler(this.cancelProductButton_Click);
             // 
             // addProductButton
             // 
@@ -123,8 +129,9 @@
             this.addProductButton.Name = "addProductButton";
             this.addProductButton.Size = new System.Drawing.Size(143, 55);
             this.addProductButton.TabIndex = 7;
-            this.addProductButton.Text = "Checkout";
+            this.addProductButton.Text = "Add Product";
             this.addProductButton.UseVisualStyleBackColor = false;
+            this.addProductButton.Click += new System.EventHandler(this.addProductButton_Click);
             // 
             // panel4
             // 

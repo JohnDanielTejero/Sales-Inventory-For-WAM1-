@@ -140,7 +140,6 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                     };
                     AppHelper.db.Products.AddOrUpdate(newProduct);
 
-                    AppHelper.db.SaveChanges();
                     AppHelper.db.Stocks.AddOrUpdate(
                        new Stock { ProductID = newProduct.ProductID, Last_Updated = DateTime.Now, Quantity = (int)this.productFormQuantity.Value }
                       );

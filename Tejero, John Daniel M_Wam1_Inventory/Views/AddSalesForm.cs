@@ -9,6 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tejero__John_Daniel_M_Wam1_Inventory.Database.DAO;
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System.IO;
 
 namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 {
@@ -71,7 +74,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                     this.addSalesCancelButton.Text = "Back";
                     this.addSalesAddProduct.Visible = false;
                     this.addSalesDeleteProduct.Visible = false;
-                    this.addSalesCheckoutButton.Visible = false;
+                    this.addSalesCheckoutButton.Text = "Print";
                     this.productFormName.Enabled = false;
                     break;
             }
@@ -149,16 +152,19 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                 return;
             }
 
-            var result = MessageBox.Show(
-                "Once submitted, sales record can no longer be deleted. Do you want to continue?",
-                "Confirm Submission",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
-
-            if (result == DialogResult.No)
+            if (mode != "View")
             {
-                return;
+                var result = MessageBox.Show(
+                    "Once submitted, sales record can no longer be deleted. Do you want to continue?",
+                    "Confirm Submission",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
+
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
             }
 
             switch (this.mode)
@@ -247,11 +253,60 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                     MessageBox.Show("Transaction successfully inserted.", "Transaction success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 default:
-                    MessageBox.Show("Submit should not be possible");
+                    using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                    {
+                        saveFileDialog.Filter = "PDF files (*.pdf)|*.pdf";
+                        saveFileDialog.Title = "Save as PDF";
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            SaveFormAsPdf(saveFileDialog.FileName);
+                        }
+                    }
                     break;
             }
 
+        }
+        private Bitmap CaptureFormAsBitmap()
+        {
+            Bitmap bitmap = new Bitmap(this.Width, this.Height);
+            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+            return bitmap;
+        }
 
+        private void SaveFormAsPdf(string filePath)
+        {
+            // Capture the form as a Bitmap
+            Bitmap formBitmap = CaptureFormAsBitmap();
+
+            // Convert Bitmap to a MemoryStream
+            using (MemoryStream stream = new MemoryStream())
+            {
+                formBitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png); // Save as PNG
+                stream.Position = 0;
+
+                // Create a new PDF document
+                PdfDocument document = new PdfDocument();
+                document.Info.Title = "Captured Form as PDF";
+
+                // Create a new PDF page and get its XGraphics object
+                PdfPage page = document.AddPage();
+                page.Width = formBitmap.Width;
+                page.Height = formBitmap.Height;
+                XGraphics graphics = XGraphics.FromPdfPage(page);
+
+                // Load XImage from the MemoryStream
+                XImage img = XImage.FromStream(stream);
+
+                // Draw the image onto the PDF page
+                graphics.DrawImage(img, 0, 0, formBitmap.Width, formBitmap.Height);
+
+                // Save the PDF document
+                document.Save(filePath);
+
+                MessageBox.Show("PDF saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
+
+
 }

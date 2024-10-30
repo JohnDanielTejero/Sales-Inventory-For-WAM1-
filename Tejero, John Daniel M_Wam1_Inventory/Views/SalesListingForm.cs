@@ -61,13 +61,13 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
             var sales = query.OrderByDescending(s => s.Date_Creation).ToList();
             foreach (var sale in sales)
             {
-                this.salesTable.Rows.Add(new object[] { sale.SaleID, sale.User.Username, sale.CustomerName, sale.Total });
+                this.salesTable.Rows.Add(new object[] { sale.SaleID, sale.User.Username, sale.Date_Creation, sale.CustomerName, $"Php {sale.Total}" });
             }
         }
 
         private void addSalesButton_Click(object sender, EventArgs e)
         {
-            this.parentFormAction(new AddSalesForm(this.parentFormAction, "Add"));
+            this.parentFormAction(new AddSalesForm(this.parentFormAction, "Add", null));
         }
 
         private void salesSearchBox_TextChanged(object sender, EventArgs e)
@@ -78,12 +78,38 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
         private void viewSalesButton_Click(object sender, EventArgs e)
         {
+            if (salesTable.SelectedRows.Count > 0)
+            {
+                var selectedRow = salesTable.SelectedRows[0];
 
+                if (selectedRow.Cells["SalesId"] != null)
+                {
+                    int salesId = (int)selectedRow.Cells["SalesId"].Value;
+                    parentFormAction(new AddSalesForm(parentFormAction, "View", AppHelper.db.Sales
+                        .Include("SalesItems")
+                        .Include("SalesItems.Product")
+                        .Include("SalesItems.Product.Category")
+                        .FirstOrDefault(s => s.SaleID == salesId)));
+                }
+            }
         }
 
         private void editSalesButton_Click(object sender, EventArgs e)
         {
+            if (salesTable.SelectedRows.Count > 0)
+            {
+                var selectedRow = salesTable.SelectedRows[0];
 
+                if (selectedRow.Cells["SalesId"] != null)
+                {
+                    int salesId = (int)selectedRow.Cells["SalesId"].Value;
+                    parentFormAction(new AddSalesForm(parentFormAction, "Edit", AppHelper.db.Sales
+                        .Include("SalesItems")
+                        .Include("SalesItems.Product")
+                        .Include("SalesItems.Product.Category")
+                        .FirstOrDefault(s => s.SaleID == salesId)));
+                }
+            }
         }
     }
 }

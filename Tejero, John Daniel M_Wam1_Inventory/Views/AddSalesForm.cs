@@ -17,18 +17,32 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
         private Action<object> parentActionForm;
         private string mode;
         private decimal total = 0;
+
+        private Sale sale;
         //contain all list item
         private List<object[]> salesItemProducts = new List<object[]>();
-        public AddSalesForm(Action<object> parentActionForm, string mode)
+        public AddSalesForm(Action<object> parentActionForm, string mode, Sale sale)
         {
             InitializeComponent();
             this.parentActionForm = parentActionForm;
             this.mode = mode;
+            this.sale = sale;
 
             switch (this.mode)
             {
                 case "Edit":
                     //load sales item
+                    this.productFormName.Text = this.sale.CustomerName;
+                    foreach (SalesItem item in sale.SalesItems)
+                    {
+                        this.addSalesItem(new object[] {
+                            item.ProductId,
+                            item.Product.ProductName,
+                            Convert.ToDouble(item.Product.Price),
+                            item.Product.Category.CategoryName,
+                            item.Quantity
+                        });
+                    }
 
                     this.addSalesLabel.Text = "Edit Sales";
                     this.addSalesCheckoutButton.Text = "Save Changes";
@@ -36,16 +50,29 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
 
                 case "Add":
                     this.addSalesLabel.Text = "Add Sales";
- 
+
                     break;
 
                 default:
                     //load sales item
+                    this.productFormName.Text = this.sale.CustomerName;
+                    foreach (SalesItem item in sale.SalesItems)
+                    {
+                        this.addSalesItem(new object[] {
+                            item.ProductId,
+                            item.Product.ProductName,
+                            Convert.ToDouble(item.Product.Price),
+                            item.Product.Category.CategoryName,
+                            item.Quantity
+                        });
+                    }
 
                     this.addSalesLabel.Text = "View Sales";
                     this.addSalesCancelButton.Text = "Back";
+                    this.addSalesAddProduct.Visible = false;
+                    this.addSalesDeleteProduct.Visible = false;
                     this.addSalesCheckoutButton.Visible = false;
-                    this.customerName.Enabled = false;
+                    this.productFormName.Enabled = false;
                     break;
             }
 
@@ -64,7 +91,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
             foreach (object[] salesItemProduct in salesItemProducts)
             {
                 this.productsTable.Rows.Add(salesItemProduct);
-                total = total + ((decimal)salesItemProduct[4] * (decimal)salesItemProduct[2]);
+                total = total + (Convert.ToDecimal(salesItemProduct[4]) * Convert.ToDecimal(salesItemProduct[2]));
             }
             this.addSalesFormTotalLabel.Text = $"Total: Php: {total}";
 
@@ -122,20 +149,77 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                 return;
             }
 
+            var result = MessageBox.Show(
+                "Once submitted, sales record can no longer be deleted. Do you want to continue?",
+                "Confirm Submission",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
             switch (this.mode)
             {
                 case "Edit":
-                   //delete all sales item with current salesId, 
+                    var itemsToRemove = this.sale.SalesItems.ToList();
+                    //get current stock, add back to product. (update stock)
+                    foreach (SalesItem salesItem in itemsToRemove)
+                    {
+                        int targetProduct = Convert.ToInt32(salesItem.ProductId);
+                        Stock stock = AppHelper.db.Stocks.FirstOrDefault(s => s.ProductID == targetProduct);
+
+                        stock.Quantity = stock.Quantity + Convert.ToInt32(salesItem.Quantity);
+                        AppHelper.db.Stocks.AddOrUpdate(stock);
+
+                        AppHelper.db.SalesItems.Remove(salesItem);
+                    }
+
+                    // Save changes to persist the deletions
+                    AppHelper.db.SaveChanges();
+
+                    //update sale
+                    sale.CustomerName = this.productFormName.Text;
+                    sale.Total = (int)this.total;
+
+                    AppHelper.db.Sales.AddOrUpdate(sale);
+
+                    //insert salesitem again
+                    //update stock
+                    foreach (object[] salesItemProduct in salesItemProducts)
+                    {
+                        int targetProduct = Convert.ToInt32(salesItemProduct[0]);
+
+                        var newSalesItem = new SalesItem
+                        {
+                            ProductId = targetProduct,
+                            Price = Convert.ToDecimal(salesItemProduct[2]),
+                            Quantity = Convert.ToInt32(salesItemProduct[4]),
+                            SalesId = sale.SaleID
+                        };
+
+                        AppHelper.db.SalesItems.Add(newSalesItem);
+
+                        Stock stock = AppHelper.db.Stocks.FirstOrDefault(s => s.ProductID == targetProduct);
+
+                        stock.Quantity = stock.Quantity - Convert.ToInt32(salesItemProduct[4]);
+                        AppHelper.db.Stocks.AddOrUpdate(stock);
+                    }
+
+                    AppHelper.db.SaveChanges();
+                    MessageBox.Show("Transaction successfully updated.", "Transaction update success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     break;
                 case "Add":
-                    Sale sale = new Sale
+                    Sale newSale = new Sale
                     {
                         CustomerName = productFormName.Text,
                         Total = (float)this.total,
                         Date_Creation = DateTime.Now,
                         UserID = logged.UserID
                     };
-                    AppHelper.db.Sales.AddOrUpdate(sale);
+                    AppHelper.db.Sales.AddOrUpdate(newSale);
 
                     foreach (object[] salesItemProduct in salesItemProducts)
                     {
@@ -146,7 +230,7 @@ namespace Tejero__John_Daniel_M_Wam1_Inventory.Views
                             ProductId = targetProduct,
                             Price = Convert.ToDecimal(salesItemProduct[2]),
                             Quantity = Convert.ToInt32(salesItemProduct[4]),
-                            SalesId = sale.SaleID
+                            SalesId = newSale.SaleID
                         });
 
                         Stock stock = AppHelper.db.Stocks.FirstOrDefault(s => s.ProductID == targetProduct);

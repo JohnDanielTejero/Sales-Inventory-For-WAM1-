@@ -32,7 +32,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.emptyStockCount = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -40,7 +40,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.salesCount = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -78,7 +78,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.panel11.Controls.Add(this.label19);
+            this.panel11.Controls.Add(this.emptyStockCount);
             this.panel11.Controls.Add(this.label17);
             this.panel11.Controls.Add(this.label15);
             this.panel11.Controls.Add(this.pictureBox9);
@@ -91,17 +91,17 @@
             this.panel11.Size = new System.Drawing.Size(366, 259);
             this.panel11.TabIndex = 1;
             // 
-            // label19
+            // emptyStockCount
             // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.label19.Location = new System.Drawing.Point(59, 100);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(30, 31);
-            this.label19.TabIndex = 8;
-            this.label19.Text = "0";
+            this.emptyStockCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.emptyStockCount.AutoSize = true;
+            this.emptyStockCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emptyStockCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.emptyStockCount.Location = new System.Drawing.Point(59, 100);
+            this.emptyStockCount.Name = "emptyStockCount";
+            this.emptyStockCount.Size = new System.Drawing.Size(30, 31);
+            this.emptyStockCount.TabIndex = 8;
+            this.emptyStockCount.Text = "0";
             // 
             // label17
             // 
@@ -174,7 +174,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(148)))), ((int)(((byte)(249)))));
-            this.panel10.Controls.Add(this.label18);
+            this.panel10.Controls.Add(this.salesCount);
             this.panel10.Controls.Add(this.label16);
             this.panel10.Controls.Add(this.label14);
             this.panel10.Controls.Add(this.pictureBox7);
@@ -187,17 +187,17 @@
             this.panel10.Size = new System.Drawing.Size(366, 259);
             this.panel10.TabIndex = 0;
             // 
-            // label18
+            // salesCount
             // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.label18.Location = new System.Drawing.Point(17, 106);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(87, 31);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "$0.00";
+            this.salesCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.salesCount.AutoSize = true;
+            this.salesCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salesCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.salesCount.Location = new System.Drawing.Point(17, 106);
+            this.salesCount.Name = "salesCount";
+            this.salesCount.Size = new System.Drawing.Size(130, 31);
+            this.salesCount.TabIndex = 8;
+            this.salesCount.Text = "Php 0.00";
             // 
             // label16
             // 
@@ -281,6 +281,7 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -306,10 +307,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label emptyStockCount;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label salesCount;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         //private Custom_UI.CustomDashboardButton logoutBtn;
